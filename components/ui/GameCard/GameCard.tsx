@@ -3,13 +3,18 @@ import SportsEsports from "@mui/icons-material/SportsEsports";
 
 import { GameCardProps } from "./types";
 
-export const GameCard = ({ name, platform, description }: GameCardProps) => {
+export const GameCard = ({
+  name,
+  platform,
+  description,
+  cover,
+}: GameCardProps) => {
   return (
-    <Card sx={{ maxWidth: 250, margin: 2 }}>
+    <Card sx={{ width: 200, margin: 2 }}>
       <CardMedia
         component="img"
         height="250"
-        image="https://upload.wikimedia.org/wikipedia/en/a/a3/Halo_TMCC_KeyArt_Vert_2019.png"
+        image={cover || "/no-found.png"}
         alt="green iguana"
       />
       <CardContent>

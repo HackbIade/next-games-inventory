@@ -37,8 +37,8 @@ const Home: NextPage = () => {
         Add New Game
       </Button>
       <Grid container>
-        {games?.map(({ name, platform }, index) => (
-          <GameCard key={index} {...{ name, platform }} />
+        {games?.map((game, index) => (
+          <GameCard key={index} {...game} />
         ))}
       </Grid>
     </Grid>
