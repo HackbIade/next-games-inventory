@@ -1,19 +1,11 @@
-import {
-  Card,
-  Grid,
-  Button,
-  CardMedia,
-  Typography,
-  CardActions,
-  CardContent,
-} from "@mui/material";
+import { Card, Grid, CardMedia, Typography, CardContent } from "@mui/material";
 import SportsEsports from "@mui/icons-material/SportsEsports";
 
 import { GameCardProps } from "./types";
 
-export const GameCard = ({ title, platform, description }: GameCardProps) => {
+export const GameCard = ({ name, platform, description }: GameCardProps) => {
   return (
-    <Card sx={{ maxWidth: 250, margin: 4 }}>
+    <Card sx={{ maxWidth: 250, margin: 2 }}>
       <CardMedia
         component="img"
         height="250"
@@ -22,11 +14,11 @@ export const GameCard = ({ title, platform, description }: GameCardProps) => {
       />
       <CardContent>
         <Typography gutterBottom variant="h5">
-          {title || "Pending..."}
+          {name || "Pending..."}
         </Typography>
         <Grid container>
-          <SportsEsports sx={{ mr: 1 }} />
-          <Typography gutterBottom variant="body1">
+          <SportsEsports color="primary" sx={{ mr: 1 }} />
+          <Typography color="primary" gutterBottom variant="body1">
             {platform || "Pending"}
           </Typography>
         </Grid>
@@ -36,9 +28,6 @@ export const GameCard = ({ title, platform, description }: GameCardProps) => {
           </Typography>
         )}
       </CardContent>
-      <CardActions>
-        <Button size="small">Editar</Button>
-      </CardActions>
     </Card>
   );
 };

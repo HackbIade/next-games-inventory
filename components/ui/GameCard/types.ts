@@ -1,5 +1,5 @@
 export interface GameCardProps {
-  title?: string;
+  name?: string;
   platform?: string;
   description?: string;
 }
