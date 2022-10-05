@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
+import { GameCard } from "../components/ui";
 
 const Home: NextPage = () => {
-  return <></>;
+  return (
+    <>
+      <GameCard />
+    </>
+  );
 };
 
 export default Home;
